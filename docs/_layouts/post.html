@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} – XYCarto</title>
     <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -16,14 +16,14 @@
          NAVIGATION
          ============================== -->
     <nav class="site-nav" id="site-nav">
-        <a href="/" class="nav-logo">
-            <img src="/img/ui/xycarto_white_bg.png" alt="XYCarto">
+        <a href="{{ site.baseurl }}/" class="nav-logo">
+            <img src="{{ site.baseurl }}/img/ui/xycarto_white_bg.png" alt="XYCarto">
         </a>
         <ul class="nav-links" id="nav-links">
-            <li><a href="/gallery.html">Gallery</a></li>
-            <li><a href="/blog.html" class="nav-active">Blog</a></li>
+            <li><a href="{{ site.baseurl }}/gallery.html">Gallery</a></li>
+            <li><a href="{{ site.baseurl }}/blog.html" class="nav-active">Blog</a></li>
             <li><a href="https://github.com/xycarto" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="{{ site.baseurl }}/contact.html">Contact</a></li>
         </ul>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -57,7 +57,7 @@
          POST FOOTER NAV
          ============================== -->
     <nav class="post-nav">
-        <a href="/blog.html" class="post-nav-back">← Back to Blog</a>
+        <a href="{{ site.baseurl }}/blog.html" class="post-nav-back">← Back to Blog</a>
     </nav>
 
     <!-- ==============================
@@ -66,13 +66,13 @@
     <footer class="site-footer">
         <p class="footer-name">XYCarto</p>
         <nav class="footer-links">
-            <a href="/gallery.html">Gallery</a>
-            <a href="/blog.html">Blog</a>
+            <a href="{{ site.baseurl }}/gallery.html">Gallery</a>
+            <a href="{{ site.baseurl }}/blog.html">Blog</a>
             <a href="https://github.com/xycarto" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="/contact.html">Contact</a>
+            <a href="{{ site.baseurl }}/contact.html">Contact</a>
         </nav>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="{{ site.baseurl }}/js/main.js"></script>
 </body>
 </html>
