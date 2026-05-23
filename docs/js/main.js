@@ -43,5 +43,12 @@
 
 
 // ----------------------------------------------------------
-// 3. GALLERY — hover transition handled in CSS
+// 3. GALLERY — disable right-click on images
 // ----------------------------------------------------------
+(function () {
+    document.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+}());
