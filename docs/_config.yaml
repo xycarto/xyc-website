@@ -1,0 +1,18 @@
+title:       XYCarto
+description: Geospatial Development and Engineering
+url:         ""
+baseurl:     ""
+
+markdown:    kramdown
+highlighter: rouge
+
+kramdown:
+  input:         GFM
+  syntax_highlighter: rouge
+
+# Tell Jekyll to leave the existing HTML pages alone
+include:
+  - index.html
+  - gallery.html
+  - contact.html
+  - viewer.html

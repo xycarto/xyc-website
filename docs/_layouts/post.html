@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} – XYCarto</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==============================
+         NAVIGATION
+         ============================== -->
+    <nav class="site-nav" id="site-nav">
+        <a href="/" class="nav-logo">
+            <img src="/img/ui/xycarto_white_bg.png" alt="XYCarto">
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/blog.html" class="nav-active">Blog</a></li>
+            <li><a href="https://github.com/xycarto" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ==============================
+         POST HEADER
+         ============================== -->
+    <header class="page-header post-header">
+        <p class="page-header-eyebrow">
+            {{ page.date | date: "%B %-d, %Y" }}
+            {% if page.tags.size > 0 %}
+                &nbsp;·&nbsp;
+                {% for tag in page.tags %}
+                    <span class="post-tag">{{ tag }}</span>{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+            {% endif %}
+        </p>
+        <h1 class="page-header-title post-title">{{ page.title }}</h1>
+    </header>
+
+    <!-- ==============================
+         POST CONTENT
+         ============================== -->
+    <article class="post-content">
+        {{ content }}
+    </article>
+
+    <!-- ==============================
+         POST FOOTER NAV
+         ============================== -->
+    <nav class="post-nav">
+        <a href="/blog.html" class="post-nav-back">← Back to Blog</a>
+    </nav>
+
+    <!-- ==============================
+         FOOTER
+         ============================== -->
+    <footer class="site-footer">
+        <p class="footer-name">XYCarto</p>
+        <nav class="footer-links">
+            <a href="/gallery.html">Gallery</a>
+            <a href="/blog.html">Blog</a>
+            <a href="https://github.com/xycarto" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
